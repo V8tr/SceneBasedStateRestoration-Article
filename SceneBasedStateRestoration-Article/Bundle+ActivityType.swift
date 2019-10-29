@@ -9,9 +9,7 @@
 import Foundation
 
 extension Bundle {
-    var activityType: String? {
-        return Bundle.main.infoDictionary?["NSUserActivityTypes"].flatMap { ids in
-            return (ids as? [String])?.first
-        }
+    var activityType: String {
+        return Bundle.main.infoDictionary?["NSUserActivityTypes"].flatMap { ($0 as? [String])?.first } ?? ""
     }
 }

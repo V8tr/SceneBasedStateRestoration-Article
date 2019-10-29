@@ -9,10 +9,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var state: AppState
+
     var body: some View {
         NavigationView {
-            NavigationLink(destination: TextInput()) {
-                Text("Enter text")
+            NavigationLink(destination: EditText(text: $state.text), isActive: $state.isEditing) {
+                Text("Edit")
             }
         }
     }
@@ -20,6 +22,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        return ContentView(state: appState)
     }
 }

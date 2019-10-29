@@ -7,18 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		801D06E6236AC65600154207 /* EditText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801D06E5236AC65600154207 /* EditText.swift */; };
 		80AAB5C72368A6E700CFB099 /* Bundle+ActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AAB5C62368A6E700CFB099 /* Bundle+ActivityType.swift */; };
+		80B2B28B23698B82005781AC /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B2B28A23698B82005781AC /* State.swift */; };
 		80BE7B1F23689C2F00115EF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BE7B1E23689C2F00115EF0 /* AppDelegate.swift */; };
 		80BE7B2123689C2F00115EF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BE7B2023689C2F00115EF0 /* SceneDelegate.swift */; };
 		80BE7B2323689C2F00115EF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BE7B2223689C2F00115EF0 /* ContentView.swift */; };
 		80BE7B2523689C3200115EF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80BE7B2423689C3200115EF0 /* Assets.xcassets */; };
 		80BE7B2823689C3200115EF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80BE7B2723689C3200115EF0 /* Preview Assets.xcassets */; };
 		80BE7B2B23689C3200115EF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BE7B2923689C3200115EF0 /* LaunchScreen.storyboard */; };
-		80BE7B332368A15E00115EF0 /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BE7B322368A15E00115EF0 /* TextInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		801D06E5236AC65600154207 /* EditText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditText.swift; sourceTree = "<group>"; };
 		80AAB5C62368A6E700CFB099 /* Bundle+ActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+ActivityType.swift"; sourceTree = "<group>"; };
+		80B2B28A23698B82005781AC /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		80BE7B1B23689C2F00115EF0 /* SceneBasedStateRestoration-Article.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SceneBasedStateRestoration-Article.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80BE7B1E23689C2F00115EF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80BE7B2023689C2F00115EF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +30,6 @@
 		80BE7B2723689C3200115EF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		80BE7B2A23689C3200115EF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80BE7B2C23689C3200115EF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		80BE7B322368A15E00115EF0 /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +65,8 @@
 				80BE7B1E23689C2F00115EF0 /* AppDelegate.swift */,
 				80BE7B2023689C2F00115EF0 /* SceneDelegate.swift */,
 				80BE7B2223689C2F00115EF0 /* ContentView.swift */,
-				80BE7B322368A15E00115EF0 /* TextInput.swift */,
+				801D06E5236AC65600154207 /* EditText.swift */,
+				80B2B28A23698B82005781AC /* State.swift */,
 				80AAB5C62368A6E700CFB099 /* Bundle+ActivityType.swift */,
 				80BE7B2423689C3200115EF0 /* Assets.xcassets */,
 				80BE7B2923689C3200115EF0 /* LaunchScreen.storyboard */,
@@ -155,8 +158,9 @@
 				80AAB5C72368A6E700CFB099 /* Bundle+ActivityType.swift in Sources */,
 				80BE7B1F23689C2F00115EF0 /* AppDelegate.swift in Sources */,
 				80BE7B2123689C2F00115EF0 /* SceneDelegate.swift in Sources */,
+				80B2B28B23698B82005781AC /* State.swift in Sources */,
 				80BE7B2323689C2F00115EF0 /* ContentView.swift in Sources */,
-				80BE7B332368A15E00115EF0 /* TextInput.swift in Sources */,
+				801D06E6236AC65600154207 /* EditText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

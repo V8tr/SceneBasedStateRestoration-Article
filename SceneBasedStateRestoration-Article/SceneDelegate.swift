@@ -14,37 +14,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        if window == nil {
-            self.window = (scene as? UIWindowScene)?.makeKeyWindow(makeInitialViewController())
-        } else if let activity = connectionOptions.userActivities.first ?? session.stateRestorationActivity {
-            restoreState(activity)
+        attachKeyWindow(to: scene)
+
+        if let activity = connectionOptions.userActivities.first ?? session.stateRestorationActivity {
+            appState.restore(from: activity)
         }
     }
-    
-    private func restoreState(_ activity: NSUserActivity) {
-        var view = ContentView()
-        
-        if let textInput = TextInput.restored(from: activity) {
-            
-        }
-//        if let detailViewController = DetailViewController.loadFromStoryboard() {
-//            if let navigationController = window?.rootViewController as? UINavigationController {
-//                navigationController.pushViewController(detailViewController, animated: false)
-//                detailViewController.restoreUserActivityState(activity)
-//                return true
-//            }
-//        }
+
+    func stateRestorationActivity(for scene: UIScene) -> NSUserActivity? {
+        let activity = NSUserActivity(activityType: Bundle.main.activityType)
+        appState.store(in: activity)
+        return activity
     }
     
-    private func makeInitialViewController() -> UIViewController {
-        return UIHostingController(rootView: ContentView())
+    func attachKeyWindow(to scene: UIScene) {
+        window = .keyWindow(scene: scene as! UIWindowScene, root: ContentView(state: appState))
     }
 }
 
-private extension UIWindowScene {
-    func makeKeyWindow(_ root: UIViewController) -> UIWindow {
-        let window = UIWindow(windowScene: self)
-        window.rootViewController = root
+private extension UIWindow {
+    static func keyWindow<View: SwiftUI.View>(scene: UIWindowScene, root: View) -> UIWindow {
+        let window = UIWindow(windowScene: scene)
+        window.rootViewController = UIHostingController(rootView: root)
         window.makeKeyAndVisible()
         return window
     }
